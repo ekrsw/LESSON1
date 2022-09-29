@@ -1,24 +1,16 @@
 package main
 
-import (
-	"flag"
-	"fmt"
-)
+import "fmt"
+
+func IsOne(i int) bool {
+	if i == 1 {
+		return true
+	} else {
+		return false
+	}
+}
 
 func main() {
-	var (
-		max int
-		msg string
-		x   bool
-	)
-
-	flag.IntVar(&max, "max", 64, "maxmaxmax")
-	flag.StringVar(&msg, "msg", "", "msg msg msg")
-	flag.BoolVar(&x, "x", false, "bool bool bool")
-
-	flag.Parse()
-
-	fmt.Println(msg)
-	fmt.Println(max)
-	fmt.Println(x)
+	fmt.Println(IsOne(1))
+	fmt.Println(IsOne(0))
 }
